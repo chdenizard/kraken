@@ -1,0 +1,50 @@
+# ---- Python ----
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ---- Test / lint / type-check caches ----
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# ---- Editors / IDE ----
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Ferramentas de IA / locais ----
+.claude/
+
+# ---- Artefatos locais de desenvolvimento ----
+Screenshot*.png
+2026-*.png
+assets/test_*
+
+# ---- Midia de exemplo NAO redistribuivel (direitos de terceiros) ----
+# Mantenha fora do repositorio publico: imagens/GIFs baixados de bancos de midia.
+assets/*.png
+assets/*.jpg
+assets/*.jpeg
+assets/*.gif
+assets/gif animadas/
+
+# ---- Notas internas / rascunhos ----
+Abstract/

@@ -1,0 +1,17 @@
+# Kraken LCD Carousel Service
+# Install: cp kraken-carousel.service ~/.config/systemd/user/
+# Enable:  systemctl --user enable kraken-carousel
+# Start:   systemctl --user start kraken-carousel
+
+[Unit]
+Description=Kraken LCD Carousel
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/kraken carousel start --foreground
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

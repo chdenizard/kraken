@@ -1,0 +1,17 @@
+# Kraken System Tray Service
+# Install: cp kraken-tray.service ~/.config/systemd/user/
+# Enable:  systemctl --user enable kraken-tray
+# Start:   systemctl --user start kraken-tray
+
+[Unit]
+Description=Kraken System Tray Icon
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/kraken tray --no-gui
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target

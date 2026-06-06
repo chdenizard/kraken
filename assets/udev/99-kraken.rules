@@ -1,0 +1,14 @@
+# NZXT Kraken - allow non-root access for liquidctl
+# Install: sudo cp 99-kraken.rules /etc/udev/rules.d/ && sudo udevadm control --reload-rules
+
+# Kraken 2023 Standard
+SUBSYSTEM=="usb", ATTR{idVendor}=="1e71", ATTR{idProduct}=="300e", MODE="0666", TAG+="uaccess"
+
+# Kraken 2023 Elite
+SUBSYSTEM=="usb", ATTR{idVendor}=="1e71", ATTR{idProduct}=="300c", MODE="0666", TAG+="uaccess"
+
+# Kraken 2024 Elite RGB
+SUBSYSTEM=="usb", ATTR{idVendor}=="1e71", ATTR{idProduct}=="3012", MODE="0666", TAG+="uaccess"
+
+# Kraken 2024 Plus
+SUBSYSTEM=="usb", ATTR{idVendor}=="1e71", ATTR{idProduct}=="3014", MODE="0666", TAG+="uaccess"

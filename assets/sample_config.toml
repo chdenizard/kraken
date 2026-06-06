@@ -1,0 +1,37 @@
+# Kraken - Sample Configuration
+# Copy to: ~/.config/kraken/config.toml
+
+[device]
+serial = ""  # Leave empty for auto-detect
+
+[lcd]
+brightness = 50        # 0-100
+orientation = 0        # 0, 90, 180, 270
+
+[carousel]
+enabled = false
+loop = true
+
+# Add carousel items like this:
+# [[carousel.items]]
+# path = "/home/user/images/logo.png"
+# seconds = 10
+#
+# [[carousel.items]]
+# path = "/home/user/images/animation.gif"
+# seconds = 30
+#
+# GIFs are played frame-by-frame (firmware 2.x ignores native animation).
+# The first run extracts frames to ~/.cache/kraken/gif_frames/<hash>/ and
+# subsequent runs reuse that cache; delete it to force re-extraction.
+# Hardware ceiling is ~120 ms per frame (~8 fps).
+
+[sysinfo]
+enabled = false
+show_cpu_temp = true
+show_gpu_temp = false
+refresh_seconds = 5.0
+
+[tray]
+enabled = false
+show_temp = true
